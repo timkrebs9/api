@@ -12,7 +12,10 @@ class Settings(BaseSettings):
 
     class Config:
         # specify the path to .env-file
-        env_file = ".env" #"../.env"
+        #env_file = "../.env"
+
+        env_file = ".env"
+
 
 
 # Instance of Settings-Class
