@@ -1,7 +1,8 @@
-from fastapi import status, HTTPException, Depends, APIRouter
-import models, schemas, utils
+from fastapi import FastAPI, Response, status, HTTPException, Depends, APIRouter
 from sqlalchemy.orm import Session
-from database import get_db
+from .. import models, schemas, utils
+from ..database import get_db
+
 
 router = APIRouter(prefix="/users", tags=['Users'])
 
