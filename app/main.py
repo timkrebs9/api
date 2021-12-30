@@ -1,7 +1,5 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.middleware.wsgi import WSGIMiddleware
-from flask import Flask, escape, request
 
 from . import models
 from .database import engine
@@ -11,13 +9,7 @@ from .config import settings
 models.Base.metadata.create_all(bind=engine)
 
 
-flask_app = Flask(__name__)
 
-
-@flask_app.route("/")
-def flask_main():
-    name = request.args.get("name", "World")
-    return f"Hello, {escape(name)} from Flask!"
 
 app = FastAPI()
 
@@ -40,5 +32,3 @@ app.include_router(like.router)
 @app.get("/")
 def root():
     return {"messages": "HelloWorld"}
-
-app.mount("/", WSGIMiddleware(flask_app))
