@@ -2,6 +2,15 @@ import pytest
 from app import models
 
 
+#===============================================================================
+# Testing Section for user operations
+#
+# Run command by hand:
+# pytest --disable-warnings -v tests/test_like.py -s
+# 
+#===============================================================================
+
+
 @pytest.fixture()
 def test_like(test_posts, session, test_user):
     new_like = models.Like(post_id=test_posts[3].id, user_id=test_user['id'])
