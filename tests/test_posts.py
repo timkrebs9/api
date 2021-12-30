@@ -6,7 +6,7 @@ from app import schemas
 # Testing Section for post operations
 #
 # Run command by hand:
-# pytest --disable-warnings -v tests/test_post.py -s
+# pytest tests/test_posts.py -v -s
 # 
 #===============================================================================
 
@@ -51,6 +51,7 @@ def test_get_one_post(authorized_client, test_posts):
     ("favorite pizza", "i love pepperoni", False),
     ("tallest skyscrapers", "wahoo", True),
 ])
+
 def test_create_post(authorized_client, test_user, test_posts, title, content, published):
     res = authorized_client.post(
         "/posts/", json={"title": title, "content": content, "published": published})
