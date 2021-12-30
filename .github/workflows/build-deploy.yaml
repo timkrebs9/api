@@ -11,7 +11,7 @@ jobs:
             DATABASE_PORT: ${{secrets.DATABASE_PORT}}
             DATABASE_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
             DATABASE_NAME: ${{secrets.DATABASE_NAME}}
-            DATABASE_USERNAME: postgres
+            DATABASE_USERNAME: ${{secrets.DATABASE_USERNAME}}
             SECRET_KEY: c73ce9dcbd97b241560315eba7e5b07f290388ac7022f93dd05b2d28837cf6cb
             ALGORITHM: HS256
             ACCESS_TOKEN_EXPIRE_MINUTES: 30
