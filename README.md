@@ -14,14 +14,15 @@ This CRUD-API
 
 ## Documentation
 
+Documentation is available at:
+`www.codlify.net/docs`
+
 ## FAQ
 
 ## Known Bugs
 
 -   None so far
 
-## Support
+## License
 
-Reach out to me at one of the following:
-
--   mail@mailto.com
+This project is licensed under the terms of the MIT license.
