@@ -7,7 +7,7 @@ jobs:
         environment:
             name: testing
         env:
-            DATABASE_HOSTNAME: localhost
+            DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME}}
             DATABASE_PORT: 5432
             DATABASE_PASSWORD: Z+eGmMKtb5hn
             DATABASE_NAME: API
