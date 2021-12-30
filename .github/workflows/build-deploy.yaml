@@ -9,7 +9,7 @@ jobs:
         env:
             DATABASE_HOSTNAME: ${{secrets.DATABASE_HOSTNAME}}
             DATABASE_PORT: ${{secrets.DATABASE_PORT}}
-            DATABASE_PASSWORD: Z+eGmMKtb5hn
+            DATABASE_PASSWORD: ${{secrets.DATABASE_PASSWORD}}
             DATABASE_NAME: API
             DATABASE_USERNAME: postgres
             SECRET_KEY: c73ce9dcbd97b241560315eba7e5b07f290388ac7022f93dd05b2d28837cf6cb
