@@ -19,9 +19,6 @@ def flask_main():
     name = request.args.get("name", "World")
     return f"Hello, {escape(name)} from Flask!"
 
-
-
-
 app = FastAPI()
 
 origins = ["*"]
@@ -40,7 +37,7 @@ app.include_router(auth.router)
 app.include_router(like.router)
 
 
-@app.get("/v1")
+@app.get("/")
 def root():
     return {"messages": "HelloWorld"}
 
