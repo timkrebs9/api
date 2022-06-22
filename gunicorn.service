@@ -5,10 +5,10 @@ After=network.target
 [Service]
 User=tim
 Group=tim
-WorkingDirectory=/home/tim/app/src/
-Environment="PATH=/home/tim/app/venv/bin"
-EnvironmentFile=/home/tim/.env
-ExecStart=/home/tim/app/venv/bin/gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8000
+WorkingDirectory=/home/azure/app/src/
+Environment="PATH=/home/azure/app/venv/bin"
+EnvironmentFile=/home/azure/.env
+ExecStart=/home/azure/app/venv/bin/gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app --bind 0.0.0.0:8000
 
 [Install]
 WantedBy=multi-user.target
